@@ -513,7 +513,7 @@ static int trimeSpace(const char *src,char *dest)
     
     len = j - i + 1;
     
-    memcpy(dest,psrc,len);
+    memcpy(dest,psrc+i,len);
     *(dest+len) = '\0';
     
     return ret;
