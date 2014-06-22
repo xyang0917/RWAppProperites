@@ -314,6 +314,14 @@ int del(void *handle, const char *key)
     }
     
     pPrev->pNext = pCurrent->pNext; // 从链表中删除
+    if (NULL != pCurrent->key) {
+        free(pCurrent->key);
+        pCurrent->key = NULL;
+    }
+    if (NULL != pCurrent->value) {
+        free(pCurrent->value);
+        pCurrent->value = NULL;
+    }
     free(pCurrent); // 释放内存
     pCurrent = NULL;
     
