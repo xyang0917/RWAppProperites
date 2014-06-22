@@ -74,7 +74,10 @@ int init(const char *filepath,void **handle)
         printf("fun init create head node error:%d\n",ret);
         return ret;
     }
-    memset(pHead, 0, sizeof(Properties));
+    //memset(pHead, 0, sizeof(Properties));
+    memset(pHead->key, 0, KEY_SIZE);
+    memset(pHead->value, 0, VALUE_SIZE);
+    pHead->pNext = NULL;
     
     // 保存链表头节点和文件路径到handle中
     ph->pHead = pHead;
