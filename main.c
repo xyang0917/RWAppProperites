@@ -98,6 +98,8 @@ int main(int argc, const char * argv[])
         printf("env release error:%d\n",ret);
     }
     
+	printf("test successed!");
+	
     return 0;
 }
 
